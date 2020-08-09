@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-watch ./src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",
+    "babel-plugin-import-graphql": "^2.7.0",
     "babel-watch": "^7.0.0"
   }
 }
