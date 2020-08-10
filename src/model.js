@@ -1,12 +1,32 @@
-const booksDB = [
-    {
-        title: 'Harry Potter',
-        author: 'J.K. Rowling'
-    },
-    {
-        title: 'Jurassic Park',
-        author: 'Michael Crichton'
-    }
+const initialDB = [
+    [
+        'ID-1',
+        {
+            title: 'Harry Potter',
+            author: 'J.K. Rowling'
+        }
+    ],
+    [
+        'ID-2',
+        {
+            title: 'Jurassic Park',
+            author: 'Michael Crichton'
+        }
+    ]
 ];
 
-export const getBooks = () => booksDB;
+const booksDB = new Map(initialDB);
+
+export const getBooks = () => {
+    const books = [];
+    booksDB.forEach((value, key) => {
+        const currentBook = {
+            id: key,
+            ...value
+        };
+        books.push(currentBook);
+    });
+    return books;
+};
+
+console.log(getBooks());
