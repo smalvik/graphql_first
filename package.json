@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-watch ./src/index.js"
+    "start": "babel-watch ./src/index.js",
+    "clean": "del ./node_modules/.cache/babel-loader"
   },
   "author": "",
   "license": "ISC",
